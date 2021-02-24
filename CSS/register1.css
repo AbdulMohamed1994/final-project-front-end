@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+  }
+
+#body{
+    background: blueviolet;
+	background-size: cover;
+	background-position: top center;
+}
+.container1 {
+    background-color:whitesmoke;
+    padding: 4px 40px;
+    border-radius: 91px;
+    margin: auto;
+    width: 25%;
+    color: #555555;
+    box-shadow: 0 0px 20px 0 rgb(255, 81, 0), 0 22px 40px 0 rgb(255, 81, 0);
+}
+
+h1{
+    color: rgb(255, 81, 0);
+}
+input{
+    width:30vh;
+    height: 4vh;
+    border-radius: 10px;
+}
+
+.btn {
+    background-color:#00d689;
+    width: 10vh;
+    height:5vh;
+    padding: 10px 2px;
+    margin: 20px 1px;
+    color: white;
+    font-size: 20px;
+    border-radius:20px;
+}
+.btn:hover {
+    background-color: #1ab67d;
+  }
