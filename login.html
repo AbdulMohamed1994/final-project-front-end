@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div id="back">
+        <div class="backRight"></div>
+        <div class="backLeft"></div>
+      </div>
+      <link rel="stylesheet" href="../final_project_frontend/CSS/login.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <link rel="js" href="../final_project_frontend/JS/new.js">
+      <div id="slideBox">
+        <div class="topLayer">
+          <div class="left">
+            <div class="content">
+            <!-- <form action="{{ url_for('add-new-record/" method="post"></form> -->
+              <h2>Sign Up</h2>
+                <form id="register" method="post" onsubmit="event.preventDefault(); register()">
+                    <div class="form-group">
+                        <input required type="text" name="name" placeholder="Full Name" ><br>
+                        <input required type="text" name="surname"placeholder="Surames" ><br>
+                        <input required type="text" name="email"placeholder="Email address"><br>
+                        <input required type="text" name="address"placeholder="Street Address"><br>
+                        <input required type="text" name="suburb"placeholder="Suburb"><br>
+                        <input required type="text" name="city"placeholder="City"><br>
+                        <input required type="text" name="zip_code"placeholder="Zip Code"><br>
+                        <input required type="password" name="password"placeholder="Password"><br>
+                        <input required type="password" name="confirm" placeholder="Re-enter Password"><br>
+                        <button type="submit" value="submit" class="btn">Sign up</button><br>
+                    </div>
+                </form>
+              <button id="goLeft" class="off">Already a user</button>
+            </div>
+          </div>
+          <div class="right">
+            <div class="content">
+              <h2>Login</h2>
+              <form id="login" method="post" onsubmit="event.preventDefault(); login();">
+                <div class="form-group">
+                  <label for="username" class="form-label">E-mail</label>
+                  <input type="text" />
+                  <label for="username" class="form-label">Password</label>
+                  <input type="password" />
+                </div>
+                <button type="submit">Login</button>
+                <button type="button" id="goRight" class="off">Need an account?</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Form javascript -->
+      <script>
+          $(document).ready(function(){
+    $('#goRight').on('click', function(){
+      $('#slideBox').animate({
+        'marginLeft' : '0'
+      });
+      $('.topLayer').animate({
+        'marginLeft' : '100%'
+      });
+    });
+    $('#goLeft').on('click', function(){
+      $('#slideBox').animate({
+        'marginLeft' : '50%'
+      });
+      $('.topLayer').animate({
+        'marginLeft': '0'
+      });
+    });
+  });
+      </script>
+      <script type="text/javascript" src="./JS/new.js"></script>
+</body>
+</html>
