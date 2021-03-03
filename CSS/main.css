@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.wrapper .border{
+    width: 100%;
+    height: 5px;
+    background: #03A9F4;
+}
+/* styling the top half of my navbar */
+.wrapper .top_nav{
+    width: 100%;
+    height:65px;
+    background: #2C3034;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .top_nav .left{
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .top_nav .left .logo p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #03A9F4;
+    margin-right: 25px;
+    height:10%;
+}
+
+.wrapper .top_nav .left .search_bar input[type="text"]{
+    border: 1px solid #03A9F4;
+    /*padding: 5px 75%;*/
+    border-radius: 8px;
+    outline: none;
+}
+
+.wrapper .top_nav .left .search_bar input[type="text"]:focus{
+    /* width: 250px; */
+
+}
+
+.wrapper .top_nav .right ul{
+    display: flex;
+}
+
+.wrapper .top_nav .right ul li{
+    margin: 0 12px;
+}
+
+.wrapper .top_nav .right ul li:last-child{
+    background:#03f40f;
+    margin-right: 0;
+    border-radius: 2px;
+    letter-spacing: 3px;
+}
+
+.wrapper .top_nav .right ul li a{
+    display: block;
+    padding: 8px 10px;
+    color: white;
+}
+
+
+.wrapper .top_nav .right ul li:last-child a{
+    color: #fff;
+}
+
+.wrapper .top_nav .right ul li:hover:last-child{
+    background: crimson;
+}
+
+.wrapper .top_nav .right ul li:hover{
+    background: #03A9F4;
+    border-radius: 5px;
+}
+
+/* styling the bottom half of my navbar */
+
+.wrapper .bottom_nav{
+    width: 100%;
+    background-color: #2C3034;
+    height: 45px;
+    padding: 0 50px;
+}
+
+.bottom_nav a{
+    color: white;
+}
+
+
+.b_underline :hover{
+    border-bottom:#03A9F4 2px solid;
+}
+
+.wrapper .bottom_nav ul{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font: size 12px;
+}
+
+.search_bar{
+    width:1300px;
+}
+
+.search_bar input{
+    width:100%;
+}

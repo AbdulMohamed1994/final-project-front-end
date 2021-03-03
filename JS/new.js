@@ -67,9 +67,10 @@ function register(){
     })
     .then((response) => response.json())
     .then((json) => console.log(json))
-    .catch((err) => log.error(err))
-
+    .catch((err) => console.error(err))
     registerForm.reset();
     fetchData();
+
+    window.location.href = "./index.html";
 
 }
