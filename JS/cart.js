@@ -112,7 +112,7 @@ function showCart(){
 // function renderCart(){
 //     let cart = JSON.parse(localStorage.getItem("cart"));
 
-//     fetch("http://127.0.0.1:5000/show-records/")
+//     fetch("https://final-database.herokuapp.com/show-records/")
 //         .then((res) => res.json())
 //         .then((data) => {
 //             console.log(data);

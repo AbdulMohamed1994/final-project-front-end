@@ -7,7 +7,7 @@ let contentBox = document.getElementById("product-content")
 let selectedProduct = {}
 
 // Fetch single item data from backend
-fetch(`http://127.0.0.1:5000/show-records/${ params.get("productID") }/`)
+fetch(`https://final-database.herokuapp.com/show-records/${ params.get("productID") }/`)
 .then(response => response.json())
 .then(product => {
     // write data to content box

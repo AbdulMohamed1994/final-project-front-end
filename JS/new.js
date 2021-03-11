@@ -1,7 +1,7 @@
 let users;
 
 function fetchData() {
-    fetch('http://127.0.0.1:5000/show-records/')
+    fetch('https://final-database.herokuapp.com/show-records/')
         .then(res => res.json())
         .then(data => {
             console.log(data);
@@ -51,7 +51,7 @@ function register() {
     let zipcode = inputs[6].value
     let password = inputs[7].value
 
-    fetch('http://127.0.0.1:5000/add-new-record/', {
+    fetch('https://final-database.herokuapp.com//add-new-record/', {
         method: 'POST',
         body: JSON.stringify({
             name,
@@ -73,6 +73,6 @@ function register() {
     registerForm.reset();
     fetchData();
 
-    window.location.href = "./login.html";
+    window.location.href = "login.html";
 
 }
