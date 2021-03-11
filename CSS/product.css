@@ -1,0 +1,16 @@
+.single-product{
+    text-align-last: center;
+    margin-left: 25%;
+    margin-right:25%;
+    margin-top: 5%;
+    border: solid 3px;
+    border-radius: 10px;
+    border-color: #8b9096;
+    padding: 15px;
+    box-shadow: 5px 5px 5px #03A9F4;
+}
+
+.single-product img{
+    width: 25%;
+}
+

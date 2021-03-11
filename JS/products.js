@@ -27,11 +27,11 @@ fetch('http://127.0.0.1:5000/show-records/')
 
 function createProduct(product){
     return `
-    <div class="card">
+    <a class="card" href="./product.html?productID=${ product.id }">
         <img src=${ product.image } />
         <h4>${ product.name }</h4>
         <h5>Price: ${ product.price }</h5>
-    </div>
+    </a>
     `;
 }
 

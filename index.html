@@ -5,32 +5,127 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Welcome to stox.com</title>
+    <link rel="stylesheet" type="text/css" href='../final_project_frontend/CSS/preloader.css'>
 
     <!--google fonts link-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="../final_project_frontend/CSS/main.css" class="">
+    <link rel="stylesheet" href="../final_project_frontend/CSS/footer.css">
+    <link rel="stylesheet" href="../final_project_frontend/CSS/footer.css">
+    <link rel="stylesheet" href="../final_project_frontend/CSS/new.css">
+    <link rel="stylesheet" href="./CSS/sliders.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
-    
+
+<div class="load">
+    <span class="loader">Loading...</span>
+    <span class="load_animation1"></span>
+</div>
+<!--Top half of the navbar-->
 <div class="wrapper">
     <div class="border"></div>
     <div class="top_nav">
         <div class="left">
-            <div class="logo"><p><span>STOX</span>.com</p></div>
+            <div class="logo"><a href="./index.html"><p><span>STOX</span>.com</p></a></div>
             <div class="search_bar">
                 <input type="text" placeholder="Search">
             </div>
         </div>
         <div class="right">
             <ul>
-                <li><a href="#">Account</a></li>
-                <li><a href="#">Cart</a></li>
+              <li id="myBtn"><a >Account</a>
+                <li><a href="./cart.html" id="cart-link">Cart</a></li>
                 <li><a href="./login.html">Logout</a></li>
             </ul>
         </div>
     </div>
+    
+        <!--style -->
+<style>
+    /* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+padding-top: 100px; /* Location of the box */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+background-color: #fefefe;
+margin: auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+}
+
+/* The Close Button */
+.close {
+color: #aaaaaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+</style>
+</style>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+<!-- Modal content -->
+<div class="modal-content">
+  <span class="close">&times;</span>
+  <section id="user-info"></section>
+  <script src="./JS/account.js"></script><p></p>
+</div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+  modal.style.display = "none";
+}
+}
+</script>
 
     <div class="bottom_nav">
         <ul>
@@ -43,5 +138,173 @@
         </ul>
     </div>
 </div>
+
+
+
+<!--First image sliders-->
+<div class="slideshow">
+    <div class="slideshow-item">
+        <img src="../final_project_frontend/Images/magical-6046020.jpg" alt="">
+        <div class="slideshow-item-text">
+            <h5>Welcome to STOX.com!</h5>
+            <p>
+                <br>
+                The all new platform where business owners can sell their excess stock.
+                <br>
+            </p>
+        </div>
+    </div>
+
+    <div class="slideshow-item">
+        <img src="../final_project_frontend/Images/honey-5043708.jpg" alt="">
+        <div class="slideshow-item-text">
+            <h5>Wide Variety</h5>
+            <p>
+                dummy text
+            </p>
+        </div>
+    </div>
+
+    <div class="slideshow-item">
+        <img src="../final_project_frontend/Images/office-1834294.jpg" alt="">
+        <div class="slideshow-item-text">
+            <h5>Wanna sell on STOX.com?</h5>
+            <p>
+                Send us an e-mail with your enquiry and one of our agents will get back to you within 24 hours.
+            </p>
+        </div>
+    </div>
+    <button class="hamburger" onclick="toggleNav()">Hamburger</button>
+</div>   
+    
+
+  
+
+    <!-- Feature Start-->
+    <div class="feature">
+        <div class="container-fluid">
+            <h1 style="text-align:center; padding-top:65px; padding-bottom: 35px; color: #03A9F4; font-size:40px; font-weight:bold">Our Promise</h1>
+            <div class="row align-items-center">
+              
+                <div class="col-lg-3 col-md-6 feature-col">
+                    <div class="feature-content">
+                        <i class="fab fa-cc-mastercard"></i>
+                        <h2>Secure Payment</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur elit
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 feature-col">
+                    <div class="feature-content">
+                        <i class="fa fa-truck"></i>
+                        <h2>Worldwide Delivery</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur elit
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 feature-col">
+                    <div class="feature-content">
+                        <i class="fa fa-sync-alt"></i>
+                        <h2>90 Days Return</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur elit
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 feature-col">
+                    <div class="feature-content">
+                        <i class="fa fa-comments"></i>
+                        <h2>24/7 Support</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur elit
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End--> 
+
+    <!--Animated cards -->
+    <div class="container">
+        <h1 style="position: absolute;  top: 0vh; padding-top:65px; padding-bottom: 35px; color: #03A9F4; font-size:40px; font-weight:bold">Latest arrivals</h1>
+       
+        <div class="card">
+            <div class="imgbox">
+                <img src="./Images/watch4.jpg">
+            </div>
+            <div class="content">
+                <h3>Rose Pink Milanese Loop Steel Strap for Apple Watch</h3>
+                <p3>Latest Design Milanese Loop 
+                    Stainless Steel Band for your 
+                    Apple Watch.</p3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgbox">
+                <img src="./Images/sweater3.jpeg">
+            </div>
+            <div class="content">
+                <h3>Block Polo Shirt</h3>
+                <p3>Pierre Cardin Colour Block
+                    Polo Shirt, available 
+                    in various colours.</p3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgbox">
+                <img src="./Images/fan1.jpeg">
+            </div>
+            <div class="content">
+                <h3>Digimark - Electric Fan 18 Inch - Metal - Pedestal Fan 55W</h3>
+                <p3>18 inch (45cm) Metal Pedestal Fan,
+                    3 Speed Settings, Oscillating
+                    Functionality, Radial Guard,
+                    Eco-friendly low electricity usage</p3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgbox">
+                <img src="./Images/shoes4.jpeg">
+            </div>
+            <div class="content">
+                <h3>DSL Ladies Hi Top Sneaker</h3>
+                <p3>DSL Ladies Hi Top sneaker. This shoe has
+                    been created with the intention to protect
+                    your feet with great comfort and fashion to 
+                    jazz up any outfit of yours.</p3>
+            </div>
+        </div>
+    </div>
+</body>
+    <!--Animated cards end-->
+<!--footer section-->
+<footer class="footer">
+    <h6>Get in touch and stay up to date!</h6>
+    <div class="inner-footer">
+        <div class="social-links">
+            <ul>
+                <li class="social-items"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li class="social-items"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li class="social-items"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li class="social-items"><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="quick-links">
+            <ul>
+                <li class="quick-items"><a href="./index.html">Home</a></li>
+                <li class="quick-items"><a href="./contact.html">Contact Us</a></li>
+                <li class="quick-items"><a href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="outer-footer">
+        Copyright  &copy; Life Choices Coding Academy. All Rights Reserved.
+    </div>
+</footer>
 </body>
 </html>

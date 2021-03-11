@@ -5,18 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../final_project_frontend/CSS/main.css" class="">
+    <link rel="stylesheet" href="../final_project_frontend/CSS/product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Products</title>
+    <title>Document</title>
 </head>
-
-
-<body>
+<body style="overflow: hidden;overflow-y: auto;">
     <div class="wrapper">
         <div class="border"></div>
         <div class="top_nav">
             <div class="left">
-                <div class="logo"><a href="./index.html"><p><span>STOX</span>.com</p></a></div>
+                <div class="logo"><p><span>STOX</span>.com</p></div>
                 <div class="search_bar">
                     <input type="text" placeholder="Search">
                 </div>
@@ -122,52 +121,12 @@
                 <li class="b_underline"><a href="./products.html?category=apparel" >Apparel</a></li>
             </ul>
         </div>
-    </div>
-    <style>
-        #products{
-            background-color: white;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content:center;
-            align-items:stretch;
-        }
 
-        #products h4{
-            color:#2C3034;
-            font-size: large;
-        }
-        #products img{
-            display:flex;
-            width: 25%;
-            border-radius: 10px;
-            shadow: 2px 2px 2px #03A9F4;
-        }
+        <section id="product-content" style="min-height: 60vh;"></section>
 
-        #products card{
-          -webkit-transition: all 1.0s ease;
-          transition: all 1.0s ease;
-          }
-        .card:hover {
-        -webkit-transform:scale(1.1);
-        transform:scale(1.1);
-        }
-
-        .card{
-            width: 20%;
-            margin: 1%;
-            min-width: 300px;
-            border: 0.5px solid #2C3034;
-            padding: 2%;
-            box-shadow: 5px 5px 5px #03A9F4;
-            box-sizing: border-box;
-            border-radius: 10px;
-            text-align: -webkit-center;
-        }
-
-    </style>
-    <div id="products"></div>
-    <script src="./JS/products.js"></script>
+    <script src="./JS/product.js"></script>
     <script src="./JS/cart.js"></script>
+
   <!--footer section-->
 <footer class="footer">
   <h6>Get in touch and stay up to date!</h6>

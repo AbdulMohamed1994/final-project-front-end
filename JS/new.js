@@ -1,18 +1,18 @@
 let users;
 
-function fetchData(){
+function fetchData() {
     fetch('http://127.0.0.1:5000/show-records/')
-    .then(res => res.json())
-    .then(data => {
-        console.log(data);
-        users = data;
-    });
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            users = data;
+        });
 }
 
 fetchData()
 
-function login(){
-    
+function login() {
+
     let loginForm = document.getElementById("login");
     let inputs = loginForm.getElementsByTagName('input');
 
@@ -27,16 +27,18 @@ function login(){
 
     console.log(loggedIn)
 
+    localStorage.setItem("user", JSON.stringify(loggedIn[0]));
+
     if (loggedIn.length >= 1) {
         alert('You have been successfully logged in!');
-        window.location.href='./index.html'
+        window.location.href = './index.html'
     } else {
         alert('Invalid Login');
     }
     loginForm.reset();
 }
 
-function register(){
+function register() {
     let registerForm = document.getElementById('register');
     let inputs = registerForm.getElementsByTagName('input');
 
@@ -65,12 +67,12 @@ function register(){
             'Content-type': 'application/json; charset=UTF-8',
         },
     })
-    .then((response) => response.json())
-    .then((json) => console.log(json))
-    .catch((err) => console.error(err))
+        .then((response) => response.json())
+        .then((json) => console.log(json))
+        .catch((err) => console.error(err))
     registerForm.reset();
     fetchData();
 
-    window.location.href = "./index.html";
+    window.location.href = "./login.html";
 
 }
