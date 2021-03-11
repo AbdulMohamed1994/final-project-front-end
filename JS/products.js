@@ -4,7 +4,7 @@ const params = new URLSearchParams(window.location.search);
 let products = [];
 let productList = document.getElementById('products')
 
-fetch('http://127.0.0.1:5000/show-records/')
+fetch('https://final-database.herokuapp.com//show-records/')
 .then(response => response.json())
 .then(data => {
     products = data[1];
