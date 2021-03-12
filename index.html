@@ -28,8 +28,7 @@
 </div>
 <!--Top half of the navbar-->
 <div class="wrapper">
-    <div class="border"></div>
-    <div class="top_nav">
+        <div class="top_nav">
         <div class="left">
             <div class="logo"><a href="index.html"><p><span>STOX</span>.com</p></a></div>
             <div class="search_bar">
@@ -86,6 +85,43 @@ text-decoration: none;
 cursor: pointer;
 }
 </style>
+<style>
+    #cart-content{
+        background:white;
+    }
+
+    #cart-content td{
+        background: white;
+        text-align: -webkit-center;
+        text-align:center;
+        border: solid 1px;
+    }
+
+    #cart-content td img{
+        width: 30vh;
+        display: grid;
+    }
+
+    .imgcart{
+        width: 100vh;
+    }
+
+    .test{
+        background: #03A9F4;
+        text-align: center
+    }
+    table{
+        display: flow-root;
+        text-align: center;
+    /* text-align: -webkit-center; */
+        padding-left: 25vh;
+        padding-right: 25vh;
+    }
+
+    td{
+        width:50vh
+    }
+
 </style>
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -94,7 +130,8 @@ cursor: pointer;
 <div class="modal-content">
   <span class="close">&times;</span>
   <section id="user-info"></section>
-  <script src="JS/account.js"></script><p></p>
+  <script src="JS/account.js"></script>
+    <script src="JS/nav.js"></script>
 </div>
 
 </div>
@@ -126,8 +163,9 @@ if (event.target == modal) {
 }
 }
 </script>
+<li class="hamburger" onclick="toggleNav()" ><i class="fas fa-bars"></i></li>
 
-    <div class="bottom_nav">
+    <div class="bottom_nav" id="bottom_nav">
         <ul>
             <li class="b_underline"><a href="index.html" >Home</a></li>
             <li class="b_underline"><a href="products.html?category=furniture" >Furniture</a></li>
@@ -135,8 +173,26 @@ if (event.target == modal) {
             <li class="b_underline"><a href="products.html?category=kitchen" >Kitchen</a></li>
             <li class="b_underline"><a href="products.html?category=jewellery" >Jewellery</a></li>
             <li class="b_underline"><a href="products.html?category=apparel" >Apparel</a></li>
+            <li class="close" onclick="toggleNavclose()"><span style="color:red">X</span></li>
         </ul>
     </div>
+
+    <li class="hamburger1" onclick="toggleNav1()" ><i class="fas fa-bars"></i></li>
+
+    <div class="bottom_nav" id="bottom_nav1">
+        <ul>
+            <li class="b_underline"><a href="index.html" >Home</a></li>
+            <li class="b_underline"><a href="products.html?category=furniture" >Furniture</a></li>
+            <li class="b_underline"><a href="products.html?category=home improvement" >Home Improvement</a></li>
+            <li class="b_underline"><a href="products.html?category=kitchen" >Kitchen</a></li>
+            <li class="b_underline"><a href="products.html?category=jewellery" >Jewellery</a></li>
+            <li class="b_underline"><a href="products.html?category=apparel" >Apparel</a></li>
+            <li><a href="login.html">Logout</a></li>
+            <li class="close" onclick="toggleNavclose1()"><span style="color:red">X</span></li>
+        </ul>
+    </div>
+
+    
 </div>
 
 
@@ -174,7 +230,6 @@ if (event.target == modal) {
             </p>
         </div>
     </div>
-    <button class="hamburger" onclick="toggleNav()">Hamburger</button>
 </div>   
     
 

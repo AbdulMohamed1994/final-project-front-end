@@ -44,3 +44,9 @@
     place-content: center;
     }
 }
+
+@media screen and (max-width: 560px) {
+    .row.align-items-center{
+        display:grid;
+    }
+}

@@ -129,3 +129,14 @@ body .container{
     top:0;
     transform: rotateZ(180deg);
   } */
+
+  @media screen and (max-width: 900px) {
+    body .container{
+      flex-wrap: wrap;
+      height: 1865px;
+    }
+
+    .container .card{
+      top: 100px;
+    }
+  }

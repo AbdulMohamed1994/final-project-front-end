@@ -20,7 +20,7 @@ function renderCart(){
         cartContent.innerHTML = `
             <h1 style="text-align:center;">Cart</h1>
             <table style="text-align: left">
-                <thead style="background: #bebebe">
+                <thead>
                     <tr class="test">
                         <th class=""imgcart">Image</th>
                         <th class="namecart">Name</th>

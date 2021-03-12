@@ -130,30 +130,10 @@
     display: none;
   }
 
-/*navbar media queries*/
-@media screen and (max-width: 900px) {
-    .hamburger {
-      display: block;
-    }
-  
-    .nav-links {
-      width: 100%;
-      overflow: hidden;
-      position: fixed;
-      top: -100%;
-      background: black;
-      left: 0;
-      justify-content: center;
-      height: 40px;
-      align-items: center;
-      transition: all 0.3s linearz;
-    }
-    .nav-links.active{
-      top: 40px;
-    }
-  }
-  
-/* styling the first image sliders*/
+.close{
+    display: none;
+}
+
 .slideshow{
     background-color:#fff;
     margin-top:20px;
@@ -165,6 +145,86 @@
     overflow: hidden;
     border-radius: 10px 10px 10px 10px;
 }
+
+.hamburger1{
+    display:none;
+}
+
+#bottom_nav1{
+    display:none;
+}
+/*navbar media queries*/
+@media screen and (max-width: 900px) {
+    .hamburger {
+      display: block;
+      font-size: xx-large;
+    }
+
+    .hamburger1{
+        display: none;
+    }
+
+    .close{
+        display: block;
+    }
+
+    .hamburger a{
+        color: #2C3034;
+    }
+
+    .top_nav input{
+        display:none;
+    }
+
+    wrapper .bottom_nav{
+        padding: 0;
+    }
+
+    .slideshow{
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    #bottom_nav1{
+        display:none;
+    }
+  
+    .bottom_nav {
+      width: 100%;
+      overflow: hidden;
+      position: fixed;
+      top: -100%;
+      background: black;
+      left: 0;
+      justify-content: center;
+      height: 40px;
+      align-items: center;
+      transition: all 0.3s linearz;
+      font-size: 10px;
+      place-items: space-between;
+    }
+    .bottom_nav.active{
+      top: 60px;
+    }
+  }
+
+  @media screen and (max-width:550px){
+      .hamburger{
+          display:none;
+      }
+      #bottom_nav{
+          display:none;
+      }
+      .hamburger1{
+          display:block;
+      }
+      #bottom_nav1{
+          display:block;
+      }
+  }
+  
+/* styling the first image sliders*/
+
 
 .slideshow-item{
     width:inherit;
@@ -356,8 +416,14 @@
 
     }
 
-    .row.align-items-center {
-        display: flex;
+    .row .align-items-center {
+        display: grid;
         flex-direction: column-reverse;
     }
+    .row {
+        display:grid;
+    }
  }
+
+
+ 
